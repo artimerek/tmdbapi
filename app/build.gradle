@@ -15,6 +15,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "API_KEY", "\"cf7867f73fc45846a3242a0aa3bd9ee8\""
     }
 
     buildTypes {
@@ -42,7 +44,7 @@ dependencies {
     def room_version = "2.4.3"
     def dagger_version = "2.43.1"
     def retrofit_version = "2.9.0"
-    def glide_version = "4.13.12"
+    def glide_version = "4.13.2"
     def coroutines_version = "1.6.4"
 
     kapt "androidx.room:room-compiler:$room_version"
@@ -51,6 +53,7 @@ dependencies {
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     kapt "com.github.bumptech.glide:compiler:$glide_version"
 
+    implementation "androidx.room:room-ktx:2.4.3"
     implementation "androidx.room:room-runtime:$room_version"
     implementation "com.google.dagger:dagger:$dagger_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
