@@ -16,7 +16,7 @@ class App : Application(), Injector {
         super.onCreate()
         appComponent = DaggerAppComponent.builder()
             .appModule(AppModule(applicationContext))
-            .netModule(NetModule("https://api.themoviedb.org/3/"))
+            .netModule(NetModule(BuildConfig.BASE_URL))
             .remoteDataModule(RemoteDataModule(BuildConfig.API_KEY))
             .build()
     }
